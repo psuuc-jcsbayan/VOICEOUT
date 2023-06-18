@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <title>VOICEOUT</title>
+    </head>
+
+    <body>
+
+      <!--header-->
+        <header class="p-3 mb-3 border-bottom bg-warning-subtle fixed-top">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none text-warning">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-megaphone-fill" viewbox="0 0 5 20">
+                            <path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-11zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25.222 25.222 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56V3.224zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009a68.14 68.14 0 0 1 .496.008 64 64 0 0 1 1.51.048zm1.39 1.081c.285.021.569.047.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a65.81 65.81 0 0 1 1.692.064c.327.017.65.037.966.06z"/>
+                            <b>
+                                <i>V</i>OICEOUT</b><use xlink:href="#bootstrap"/></svg>
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li>
+                            <a href="#" class="nav-link px-2 link-secondary">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-2 link-body-emphasis">Topics</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-2 link-body-emphasis">Stories</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-2 link-body-emphasis">Membership</a>
+                        </li>
+                    </ul>
+
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                    </form>
+
+                    <div class="dropdown text-end">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="data:image/png;base64,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" 
+                            alt="mdo" width="32" height="32" class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu text-small">
+                            <li>
+                                <a class="dropdown-item" href="#">Profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="write.html">Write</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Library</a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Help</a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item" href="index.html">Sign out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--body-->
+        <main class="container" style="margin-top: 7%;">
+            <div class="p-4 p-md-5 mb-4 rounded" style="background-image: url('hero2.jpg');  background-size: cover; background-repeat: no-repeat; min-height: 50vh;">
+                <h1 class="display-6 fw-bold text-light" style="margin-top: 3%;">7 Ways to Improve Your Writing Skills</h1>
+                <p class="lead my-2 text-light display-10 fw-medium fs-6 w-75">From sending emails to preparing presentations, 
+                                writing is often a day-to-day task in many professions spanning diverse industries. 
+                                Writing skills go beyond grammar and spelling. Accuracy, clarity, persuasiveness...</p>
+                <small class="text-light">Written by
+                    <b>Coursera</b>
+                    • May 18, 2023 •
+                    <span style="background-color: rgb(116, 88, 56); border-radius: 4px; width: 20px; text-align: center;">
+                        5 mins read</span>
+                </small>
+                <p class=" mb-0 mt-3" style=" border-style: solid; border-color: rgb(252, 252, 252); width: 20%; text-align: center; border-radius: 20px;">
+                    <a href="#" class="text-white fw-bold">
+                        Continue reading...</a>
+                </p>
+            </div>
+        </div>
+  
+  
+        <!--Reading List-->
+      </div><hr width="100%"><div class="py-2">
+  <h1>Reading List</h1></div>
+
+    <div class="row mb-2">
+      <div class="col-md-4">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-white" style="background-color: rgb(21, 151, 21); width: 20%; border-radius: 15px; text-align: center;">Self</strong>
+            <h3 class="mb-0">Wala Yata Akong Pangarap Sa Buhay</h3>
+            <div class="mb-1 mt-2 text-body-secondary"> <sup><b>helloaish</b> •  March 10, 2023  •  15 mins read</sup></div>
+            <p class="card-text mb-auto">“Why am I not hustling like the others? Why am I not working multiple jobs, setting up multiple investments, or owning multiple businesses..."</p>
+            <a href="#" class="stretched-link">Read more...</a>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-white" style="background-color: rgb(207, 159, 0); width: 20%; border-radius: 15px; text-align: center;">Blog</strong>
+            <h3 class="mb-0">55+ Most Popular Blog Examples</h3>
+            <div class="mb-1 mt-2 text-body-secondary"><sup><b>Tashia T.</b> •  May 18, 2023 •  38 mins read</sup></div>
+            <p class="mb-auto">New bloggers who can find a unique niche to create content about have a higher chance of surviving in the competitive blogging world...</p>
+            <a href="#" class="stretched-link">Read more...</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-white" 
+            style="background-color: rgb(39, 190, 196); width: 30%; border-radius: 15px; text-align: center;">
+            Design</strong>
+            <h3 class="mb-0">The Difference Between UX and UI Design – A Beginner’s Guide</h3>
+            <div class="mb-1 mt-2 text-body-secondary"><sup><b>Emil Lamprecht </b> •  May 17, 2023 •  21 mins read</sup></div>
+            <p class="mb-auto">Both elements are crucial to a product and work closely together. But despite their professional relationship, the roles...</p>
+            <a href="#" class="stretched-link">Read more...</a>
+          </div>
+        </div>
+      </div>
+          
+        </div>
+      </div>
+    </div>
+
+  
+  </div><hr width="100%"><div class="py-2"></div>
+
+  <div class="bg-body-secondary">
+
+    <h1 class="p-3 fw-bolder">Latest Blogs</h1>
+
+    <div class="row p-4">
+    <article class="blog-post col-md-8">
+            <h3 class="mb-0">The True Cost of Tuna: Marine Observers Dying at Sea</h3>
+            <div class="mb-1 mt-2 text-body-secondary"> <small><b>Cheri Lucas Rowlands</b> |  May 25, 2023  </small></div>
+            <p class="card-text mb-auto">Canned tuna accounts for two-thirds of the $42 billion industry worldwide. The companies behind the Bumble Bee, 
+              Chicken of the Sea, and StarKist brands control the largest share of those cans... <a href="#" class="stretched-link text-primary">Read more</a></p>
+            <div class="mb-1 mt-2 text-body-secondary"> <strong class="d-inline-block mb-2 text-white" 
+              style="background-color: rgb(21, 151, 21); width: 10%; border-radius: 15px; text-align: center;">Food</strong>
+              •  20 mins read</div>
+            <hr>
+
+            <h3 class="mb-0">You Should Never Use This Part of an Airplane Seat—Here’s Why</h3>
+            <div class="mb-1 mt-2 text-body-secondary"> <small><b>Jason Wilson</b> |  May 23, 2023  </small></div>
+            <p class="card-text mb-auto">There are lots of things to be grossed out about on airline flights. From tiny airplane bathrooms with toilets that a couple 
+              of hundred people use for many hours without cleaning on a long-haul flight, to tray tables where... <a href="#" class="stretched-link text-primary">Read more</a></p>
+            <div class="mb-1 mt-2 text-body-secondary"> <strong class="d-inline-block mb-2 text-white" 
+              style="background-color: rgb(116, 85, 102); width: 10%; border-radius: 15px; text-align: center;">Travel</strong>
+              •  10 mins read</div>
+            <hr>
+      
+            <h3 class="mb-0">16 Good Habits That Will Improve Every Aspect of Your Life</h3>
+            <div class="mb-1 mt-2 text-body-secondary"> <small><b>Cathy Garrard</b> |   May 22, 2023  </small></div>
+            <p class="card-text mb-auto">As much as we may love to think every day is a fresh adventure, much of our lives 
+              is composed of tiny, little habits that we do every single day. Some of those moments are intentional 
+              and productive, like flossing our teeth or staying hydrated. Other habits … not so much. 
+              It may feel like it’s easier for bad habits... <a href="#" class="stretched-link text-primary">Read more</a></p>
+            <div class="mb-1 mt-2 text-body-secondary"> <strong class="d-inline-block mb-2 text-white" 
+              style="background-color: rgb(181, 209, 22); width: 10%; border-radius: 15px; text-align: center;">Life</strong>
+              •  10 mins read</div>
+            <hr>
+      
+      </article>
+    
+
+      <div class="col-md-4" style="float: right;">
+        <div class="position-sticky" style="top: 2rem;">
+          <div class="p-1 mb-3 bg-body-tertiary rounded">
+            <h4 class="fst-normal p-2">About</h4>
+            <p class="mb-0 pt-0 p-2"><i>V</i>OICEOUT is a platform for connecting with like-minded individuals, 
+              expressing your opinions, and staying up-to-date with the latest trends. </p>
+          </div>
+    
+          <div class="p-4">
+            <h4 class="fst-normal">Archives</h4>
+            <ol class="list-unstyled mb-0">
+              <li><a href="#">March 2021</a></li>
+              <li><a href="#">February 2021</a></li>
+              <li><a href="#">January 2021</a></li>
+              <li><a href="#">December 2020</a></li>
+              <li><a href="#">November 2020</a></li>
+              <li><a href="#">October 2020</a></li>
+              <li><a href="#">September 2020</a></li>
+              <li><a href="#">August 2020</a></li>
+              <li><a href="#">July 2020</a></li>
+              <li><a href="#">June 2020</a></li>
+              <li><a href="#">May 2020</a></li>
+              <li><a href="#">April 2020</a></li>
+            </ol>
+          </div>
+          
+        </div>    
+  </div>
+
+
+</div></div></div></div>
+
+
+  <!--footer-->
+  <div
+  style="width: 100%; min-height: 10vh; background-color: rgb(71, 66, 53)"
+>
+  <div class="container">
+    <footer
+      class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+    >
+      <p class="col-md-4 mb-0 text-white">&copy; 2023 VOICEOUT</p>
+
+      <a
+        href="/"
+        class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none text-white"
+      >
+        <span><i>V</i>OICEOUT</span>
+      </a>
+
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item">
+          <a href="#home" class="nav-link px-2 text-white">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#features" class="nav-link px-2 text-white">Stories</a>
+        </li>
+        <li class="nav-item">
+          <a href="#write" class="nav-link px-2 text-white">Topics</a>
+        </li>
+        <li class="nav-item">
+          <a href="#write" class="nav-link px-2 text-white">Membership</a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script></body></html>
+
+</body>
+</html>
